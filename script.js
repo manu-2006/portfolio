@@ -1,11 +1,3 @@
-
-
-// CURSOR
-document.addEventListener("mousemove", e => {
-  document.querySelector(".cursor").style.transform =
-    `translate(${e.clientX}px,${e.clientY}px)`;
-});
-
 // TYPING
 const roles=["Developer","ML Enthusiast","Cybersecurity"];
 let i=0,j=0,del=false;
