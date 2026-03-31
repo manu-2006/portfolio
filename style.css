@@ -1,10 +1,35 @@
 body {
     margin: 0;
-    font-family: 'Poppins';
+    font-family: Poppins;
     background: #020617;
     color: white;
+    overflow-x: hidden;
 }
 
+/* LOADER */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #020617;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* CURSOR */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #00eaff;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* PARTICLES */
 #particles-js {
     position: fixed;
     width: 100%;
@@ -16,76 +41,25 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
+    padding: 15px 30px;
     position: sticky;
     top: 0;
-    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
-    z-index: 1000;
-}
-
-nav a {
-    margin-left: 20px;
-    color: #00eaff;
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-}
-
-/* Hover underline animation */
-nav a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: #00eaff;
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 80px;
 }
 
 .profile {
-    width: 185px;
+    width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 10%; /* FACE CENTER */
-
-    border: 3px solid #00eaff;
-    box-shadow: 0 0 25px #00eaff, 0 0 60px rgba(0,234,255,0.5);
-}
-
-/* TEXT */
-h1 {
-    background: linear-gradient(90deg,#00eaff,#00ffcc);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-/* BUTTON */
-.buttons a {
-    margin: 10px;
-    padding: 12px 25px;
-    background: #00eaff;
-    border-radius: 8px;
-    color: black;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.buttons a:hover {
-    box-shadow: 0 0 20px #00eaff;
+    object-position: center 20%;
+    box-shadow: 0 0 30px #00eaff;
 }
 
 /* CARD */
@@ -93,63 +67,45 @@ h1 {
     max-width: 900px;
     margin: 40px auto;
     padding: 25px;
-    border-radius: 15px;
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
+    border-radius: 15px;
 }
 
-/* PROJECTS */
+/* PROJECT GRID */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
 }
 
-.project-card {
+.project {
+    padding: 20px;
     background: rgba(255,255,255,0.05);
-    padding: 10px;
     border-radius: 10px;
-    transition: 0.3s;
+    cursor: pointer;
 }
 
-.project-card img {
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
     width: 100%;
-    border-radius: 10px;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px #00eaff;
-}
-
-/* SKILLS */
-.bar {
-    height: 8px;
-    background: #222;
-}
-
-.bar div {
     height: 100%;
-    background: #00eaff;
+    background: rgba(0,0,0,0.8);
 }
 
-/* FORM */
-input, textarea {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    background: #06142e;
-    border: none;
-    color: white;
+.modal-content {
+    background: #020617;
+    padding: 20px;
+    margin: 100px auto;
+    width: 300px;
 }
 
 /* REVEAL */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: 0.6s;
 }
-
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
