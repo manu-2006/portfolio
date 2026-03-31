@@ -27,9 +27,6 @@ window.addEventListener("scroll",()=>{
   });
 });
 
-// PARTICLES
-particlesJS("particles-js",{particles:{number:{value:50}}});
-
 // GITHUB PROJECTS
 fetch("https://api.github.com/users/manu-2006/repos")
 .then(res=>res.json())
