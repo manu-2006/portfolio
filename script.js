@@ -45,7 +45,7 @@ fetch("https://api.github.com/users/manu-2006/repos")
 });
 
 // EMAILJS
-emailjs.init("YOUR_PUBLIC_KEY");
+emailjs.init("dA8wxfUZxcpBV3vRB");
 
 document.getElementById("contact-form").addEventListener("submit",function(e){
   e.preventDefault();
