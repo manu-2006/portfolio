@@ -6,15 +6,24 @@
 <title>Manu Kumar</title>
 
 <link rel="stylesheet" href="style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
 
+<!-- LOADER -->
+<div id="loader">Loading...</div>
+
+<!-- CURSOR -->
+<div class="cursor"></div>
+
+<!-- PARTICLES -->
 <div id="particles-js"></div>
 
-<header id="navbar">
+<!-- NAVBAR -->
+<header>
   <h2>&lt;/&gt; Portfolio</h2>
   <nav>
     <a href="#about">About</a>
@@ -23,6 +32,7 @@
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <img src="profile.jpeg" class="profile">
 
@@ -37,65 +47,46 @@
   </div>
 
   <div class="socials">
-    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/manu-2006"><i class="fab fa-github"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
 </section>
 
 <section id="about" class="card reveal">
   <h2>About Me</h2>
-  <p>BCA student passionate about AI & Cybersecurity.</p>
-</section>
-
-<section class="card reveal">
-  <h2>Skills</h2>
-
-  <div class="skill">
-    <span>Python</span>
-    <div class="bar"><div style="width:80%"></div></div>
-  </div>
-
-  <div class="skill">
-    <span>Machine Learning</span>
-    <div class="bar"><div style="width:70%"></div></div>
-  </div>
+  <p>BCA student building AI & cybersecurity solutions.</p>
 </section>
 
 <section id="projects" class="card reveal">
   <h2>Projects</h2>
-
-  <div class="projects-grid">
-
-    <div class="project-card tilt">
-      <img src="project1.jpg">
-      <h3>AgriVision</h3>
-    </div>
-
-    <div class="project-card tilt">
-      <img src="project2.jpg">
-      <h3>AI Digital Twin Hacker</h3>
-    </div>
-
-  </div>
+  <div class="projects-grid" id="projects-container"></div>
 </section>
 
 <section id="contact" class="card reveal">
   <h2>Contact</h2>
-
-  <form>
-    <input type="text" placeholder="Name">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Message"></textarea>
-    <button>Send</button>
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message"></textarea>
+    <button type="submit">Send</button>
   </form>
-
 </section>
 
 <footer>
   <p>© Manu Kumar</p>
 </footer>
 
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="close">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-desc"></p>
+  </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script src="script.js"></script>
 
 </body>
