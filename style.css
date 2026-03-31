@@ -16,16 +16,37 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px;
+    align-items: center;
+    padding: 15px 40px;
     position: sticky;
     top: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
 }
 
 nav a {
-    margin: 0 10px;
+    margin-left: 20px;
     color: #00eaff;
     text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Hover underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00eaff;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* HERO */
