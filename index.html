@@ -6,22 +6,21 @@
 <title>Manu Kumar</title>
 
 <link rel="stylesheet" href="style.css">
-
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
-
 <body>
 
-<!-- PARTICLES -->
 <div id="particles-js"></div>
 
-<header>
+<header id="navbar">
   <h2>&lt;/&gt; Portfolio</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
@@ -30,13 +29,11 @@
   <h1>Manu Kumar</h1>
   <h3><span class="typing"></span></h3>
 
-  <p>
-    Passionate about Machine Learning, Cybersecurity, and building impactful software solutions.
-  </p>
+  <p>Machine Learning | Cybersecurity | Developer</p>
 
   <div class="buttons">
     <a href="#projects">View Projects</a>
-    <a href="resume.pdf" download>Download Resume</a>
+    <a href="resume.pdf" download>Resume</a>
   </div>
 
   <div class="socials">
@@ -45,11 +42,9 @@
   </div>
 </section>
 
-<section class="card reveal">
+<section id="about" class="card reveal">
   <h2>About Me</h2>
-  <p>
-    BCA student exploring AI, ML & Cybersecurity. Building real-world impactful projects.
-  </p>
+  <p>BCA student passionate about AI & Cybersecurity.</p>
 </section>
 
 <section class="card reveal">
@@ -64,40 +59,42 @@
     <span>Machine Learning</span>
     <div class="bar"><div style="width:70%"></div></div>
   </div>
-
 </section>
 
 <section id="projects" class="card reveal">
   <h2>Projects</h2>
 
   <div class="projects-grid">
-    <div class="project-card">
+
+    <div class="project-card tilt">
+      <img src="project1.jpg">
       <h3>AgriVision</h3>
-      <p>Plant disease detection using ML</p>
     </div>
 
-    <div class="project-card">
+    <div class="project-card tilt">
+      <img src="project2.jpg">
       <h3>AI Digital Twin Hacker</h3>
-      <p>Cybersecurity scanner with AI prediction</p>
     </div>
+
   </div>
 </section>
 
-<section class="card reveal">
+<section id="contact" class="card reveal">
   <h2>Contact</h2>
+
   <form>
     <input type="text" placeholder="Name">
     <input type="email" placeholder="Email">
     <textarea placeholder="Message"></textarea>
-    <button>Send Message</button>
+    <button>Send</button>
   </form>
+
 </section>
 
 <footer>
-  <p>© 2026 Manu Kumar</p>
+  <p>© Manu Kumar</p>
 </footer>
 
-<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <script src="script.js"></script>
 
