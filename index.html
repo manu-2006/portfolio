@@ -13,17 +13,20 @@
 </head>
 <body>
 
-<!-- CURSOR -->
-<div class="cursor"></div>
-
-<!-- NAVBAR -->
 <header>
   <h2>&lt;/&gt; Portfolio</h2>
+
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <!-- TOP RIGHT ICONS -->
+  <div class="top-icons">
+    <a href="https://github.com/manu-2006" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
 </header>
 
 <!-- HERO -->
@@ -31,64 +34,63 @@
   <img src="profile.jpeg" class="profile">
 
   <h1>Manu Kumar</h1>
-  <h3><span class="typing"></span></h3>
-
   <p>Machine Learning | Cybersecurity | Developer</p>
 
   <div class="buttons">
     <a href="#projects">View Projects</a>
     <a href="resume.pdf" download>Resume</a>
   </div>
-
-  <div class="socials">
-    <a href="https://github.com/manu-2006"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
 </section>
 
-<section id="about" class="card reveal">
+<!-- ABOUT -->
+<section id="about" class="card">
   <h2>About Me</h2>
   <p>BCA student building AI & cybersecurity solutions.</p>
 </section>
 
-<section id="projects" class="card reveal">
+<!-- PROJECTS -->
+<section id="projects" class="card">
   <h2>Projects</h2>
 
   <div class="projects-grid">
 
-    <div class="project-card tilt">
-      <img src="https://images.unsplash.com/photo-1581091870622-1e7e1f4f5e54">
+    <div class="project-card">
+      <img src="https://source.unsplash.com/400x300/?plant,technology">
       <h3>AgriVision</h3>
-      <p>AI-based plant disease detection system using Machine Learning and Flask.</p>
+      <p>AI-based plant disease detection using ML.</p>
       <a href="https://github.com/manu-2006" target="_blank">View Code</a>
     </div>
 
-    <div class="project-card tilt">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+    <div class="project-card">
+      <img src="https://source.unsplash.com/400x300/?cybersecurity,hacking">
       <h3>AI Digital Twin Hacker</h3>
-      <p>Cybersecurity platform that predicts vulnerabilities and attack paths using AI.</p>
+      <p>Cybersecurity tool for vulnerability detection & attack prediction.</p>
       <a href="https://github.com/manu-2006" target="_blank">View Code</a>
     </div>
 
   </div>
 </section>
 
+<!-- CONTACT -->
+<section id="contact" class="card">
+  <h2>Contact Me</h2>
+
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <p>© Manu Kumar</p>
-</footer>
-
-<!-- MODAL -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span id="close">&times;</span>
-    <h2 id="modal-title"></h2>
-    <p id="modal-desc"></p>
+  <div class="footer-icons">
+    <a href="https://github.com/manu-2006"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script src="script.js"></script>
+  <p>© 2026 Manu Kumar</p>
+</footer>
 
 </body>
 </html>
