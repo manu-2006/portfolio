@@ -13,6 +13,9 @@
 </head>
 <body>
 
+<!-- SCROLL PROGRESS -->
+<div id="progress-bar"></div>
+
 <header>
   <h2>&lt;/&gt; Portfolio</h2>
 
@@ -22,7 +25,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- TOP RIGHT ICONS -->
+  <!-- TOP ICONS -->
   <div class="top-icons">
     <a href="https://github.com/manu-2006" target="_blank"><i class="fab fa-github"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -43,13 +46,13 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="card">
+<section id="about" class="card reveal">
   <h2>About Me</h2>
   <p>BCA student building AI & cybersecurity solutions.</p>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="card">
+<section id="projects" class="card reveal">
   <h2>Projects</h2>
 
   <div class="projects-grid">
@@ -57,14 +60,14 @@
     <div class="project-card">
       <img src="https://source.unsplash.com/400x300/?plant,technology">
       <h3>AgriVision</h3>
-      <p>AI-based plant disease detection using ML.</p>
+      <p>AI-based plant disease detection using Machine Learning.</p>
       <a href="https://github.com/manu-2006" target="_blank">View Code</a>
     </div>
 
     <div class="project-card">
       <img src="https://source.unsplash.com/400x300/?cybersecurity,hacking">
       <h3>AI Digital Twin Hacker</h3>
-      <p>Cybersecurity tool for vulnerability detection & attack prediction.</p>
+      <p>Cybersecurity platform for vulnerability detection and attack prediction.</p>
       <a href="https://github.com/manu-2006" target="_blank">View Code</a>
     </div>
 
@@ -72,12 +75,12 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="card">
+<section id="contact" class="card reveal">
   <h2>Contact Me</h2>
 
   <form>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
     <textarea placeholder="Your Message"></textarea>
     <button>Send Message</button>
   </form>
@@ -91,6 +94,8 @@
   </div>
   <p>© 2026 Manu Kumar</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
