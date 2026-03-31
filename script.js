@@ -1,5 +1,4 @@
-// LOADER
-window.onload = () => document.getElementById("loader").style.display = "none";
+
 
 // CURSOR
 document.addEventListener("mousemove", e => {
