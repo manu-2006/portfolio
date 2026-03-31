@@ -91,3 +91,39 @@ header {
     opacity: 1;
     transform: translateY(0);
 }
+
+.project-card {
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    transition: 0.3s;
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    color: #00eaff;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.project-card a {
+    color: #00eaff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00eaff;
+}
