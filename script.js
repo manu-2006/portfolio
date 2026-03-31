@@ -11,14 +11,21 @@ function type(){
 }
 type();
 
-// SCROLL
-window.addEventListener("scroll",()=>{
-  document.querySelectorAll(".reveal").forEach(el=>{
-    if(el.getBoundingClientRect().top<window.innerHeight-100)
-      el.classList.add("active");
-  });
+// PROGRESS BAR
+window.addEventListener("scroll", () => {
+  let scroll = document.documentElement.scrollTop;
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  document.getElementById("progress-bar").style.width = (scroll / height) * 100 + "%";
 });
 
+// SCROLL REVEAL
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".reveal").forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
 // GITHUB PROJECTS
 fetch("https://api.github.com/users/manu-2006/repos")
 .then(res=>res.json())
