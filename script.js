@@ -1,48 +1,54 @@
-// SCROLL ANIMATION
-window.addEventListener("scroll", () => {
-  document.querySelectorAll(".reveal").forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-      el.classList.add("active");
-    }
-  });
+// LOADER
+window.onload = () => document.getElementById("loader").style.display = "none";
+
+// CURSOR
+document.addEventListener("mousemove", e => {
+  document.querySelector(".cursor").style.transform =
+    `translate(${e.clientX}px,${e.clientY}px)`;
 });
 
 // TYPING
-const roles = ["Aspiring Developer","ML Enthusiast","Cybersecurity Learner"];
-let i=0,j=0,current="",del=false;
+const roles=["Developer","ML Enthusiast","Cybersecurity"];
+let i=0,j=0,del=false;
 
 function type(){
-  current = roles[i];
-
-  if(!del){
-    j++;
-    if(j==current.length) del=true;
-  } else {
-    j--;
-    if(j==0){ del=false; i=(i+1)%roles.length;}
-  }
-
-  document.querySelector(".typing").innerText = current.substring(0,j);
-  setTimeout(type, del?50:100);
+  let text=roles[i];
+  if(!del){j++; if(j==text.length)del=true;}
+  else {j--; if(j==0){del=false;i=(i+1)%roles.length;}}
+  document.querySelector(".typing").innerText=text.substring(0,j);
+  setTimeout(type,100);
 }
 type();
 
-// PARTICLES
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 60 },
-    line_linked: { enable: true, color: "#00eaff" }
-  }
+// SCROLL
+window.addEventListener("scroll",()=>{
+  document.querySelectorAll(".reveal").forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100)
+      el.classList.add("active");
+  });
 });
 
-// 3D TILT EFFECT
-document.querySelectorAll(".tilt").forEach(card=>{
-  card.addEventListener("mousemove", e=>{
-    let x = e.offsetX;
-    let y = e.offsetY;
-    card.style.transform = `rotateY(${x/20}deg) rotateX(${y/20}deg)`;
+// PARTICLES
+particlesJS("particles-js",{particles:{number:{value:50}}});
+
+// GITHUB PROJECTS
+fetch("https://api.github.com/users/manu-2006/repos")
+.then(res=>res.json())
+.then(data=>{
+  let container=document.getElementById("projects-container");
+  data.slice(0,4).forEach(repo=>{
+    let div=document.createElement("div");
+    div.className="project";
+    div.innerHTML=`<h3>${repo.name}</h3><p>${repo.description||""}</p>`;
+    container.appendChild(div);
   });
-  card.addEventListener("mouseleave", ()=>{
-    card.style.transform = "rotate(0)";
-  });
+});
+
+// EMAILJS
+emailjs.init("YOUR_PUBLIC_KEY");
+
+document.getElementById("contact-form").addEventListener("submit",function(e){
+  e.preventDefault();
+  emailjs.sendForm("YOUR_SERVICE","YOUR_TEMPLATE",this)
+  .then(()=>alert("Message Sent"));
 });
