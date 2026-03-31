@@ -1,92 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manu Kumar Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manu Kumar</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
-    <h2>&lt;/&gt; Portfolio</h2>
+  <h2>&lt;/&gt; Portfolio</h2>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <img src="profile.jpeg" class="profile">
-    <h1>Manu Kumar</h1>
-    <p>BCA Student & Aspiring Developer</p>
-    <p class="desc">
-        Passionate about Machine Learning, Cybersecurity, and building impactful software solutions.
-    </p>
+  <img src="profile.jpeg" class="profile">
 
-    <div class="buttons">
-        <a href="#projects">View Projects</a>
-        <a href="#contact" class="outline">Get in Touch</a>
-    </div>
+  <h1>Manu Kumar</h1>
+  <h3>BCA Student & Aspiring Developer</h3>
+
+  <p>
+    Passionate about Machine Learning, Cybersecurity, and building impactful software solutions.
+  </p>
+
+  <div class="buttons">
+    <a href="#projects">View Projects</a>
+    <a href="#contact" class="outline">Get in Touch</a>
+  </div>
 </section>
 
-<section class="card">
-   <h2>About Me</h2>
-    </section>
-    <p>
-        I'm a BCA student with a strong passion for technology and problem-solving.
-        Exploring Machine Learning and Cybersecurity while building real-world projects.
-    </p>
+<!-- ABOUT -->
+<section class="card reveal">
+  <h2>About Me</h2>
+  <p>
+    I'm a BCA student passionate about solving real-world problems using Machine Learning and Cybersecurity.
+  </p>
 </section>
 
-<section class="skills">
-    <h2>Skills & Technologies</h2>
+<!-- SKILLS -->
+<section class="card reveal">
+  <h2>Skills</h2>
 
-    <div class="skill">
-        <span>Python</span>
-        <div class="bar"><div style="width:75%"></div></div>
-    </div>
+  <div class="skill">
+    <span>Python</span>
+    <div class="bar"><div style="width:80%"></div></div>
+  </div>
 
-    <div class="skill">
-        <span>Java</span>
-        <div class="bar"><div style="width:50%"></div></div>
-    </div>
+  <div class="skill">
+    <span>Machine Learning</span>
+    <div class="bar"><div style="width:70%"></div></div>
+  </div>
 
-    <div class="skill">
-        <span>C++</span>
-        <div class="bar"><div style="width:50%"></div></div>
-    </div>
+  <div class="skill">
+    <span>GitHub</span>
+    <div class="bar"><div style="width:75%"></div></div>
+  </div>
 
-    <div class="skill">
-        <span>Machine Learning</span>
-        <div class="bar"><div style="width:70%"></div></div>
-    </div>
 </section>
 
-<section id="projects" class="projects">
-    <h2>Featured Projects</h2>
+<!-- PROJECTS -->
+<section id="projects" class="card reveal">
+  <h2>Projects</h2>
 
-    <div class="card">
-        <h3>AgriVision - ML Project</h3>
-        <p>Plant disease detection using Machine Learning.</p>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3>AgriVision</h3>
+      <p>Plant disease detection using ML</p>
     </div>
 
-    <div class="card">
-        <h3>AI Digital Twin Hacker</h3>
-        <p>Cybersecurity tool for vulnerability scanning & attack prediction.</p>
+    <div class="project-card">
+      <h3>AI Digital Twin Hacker</h3>
+      <p>Cybersecurity scanner with AI prediction</p>
     </div>
+
+  </div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Get in Touch</h2>
+<!-- CONTACT -->
+<section id="contact" class="card reveal">
+  <h2>Contact</h2>
 
-    <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+  <form>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button>Send Message</button>
+  </form>
+
 </section>
 
 <footer>
-    <p>© 2026 Manu Kumar</p>
+  <p>© 2026 Manu Kumar</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
