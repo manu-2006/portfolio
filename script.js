@@ -1,53 +1,48 @@
-const reveals = document.querySelectorAll(".reveal");
-
-window.addEventListener("scroll", () => {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
-      el.classList.add("active");
-    }
-  });
-});
 // SCROLL ANIMATION
-const reveals = document.querySelectorAll(".reveal");
-
 window.addEventListener("scroll", () => {
-  reveals.forEach(el => {
-    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+  document.querySelectorAll(".reveal").forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
       el.classList.add("active");
     }
   });
 });
 
-// TYPING EFFECT
-const text = ["Aspiring Developer", "ML Enthusiast", "Cybersecurity Learner"];
-let i = 0, j = 0, current = "", isDeleting = false;
+// TYPING
+const roles = ["Aspiring Developer","ML Enthusiast","Cybersecurity Learner"];
+let i=0,j=0,current="",del=false;
 
-function type() {
-  current = text[i];
-  
-  if (!isDeleting) {
+function type(){
+  current = roles[i];
+
+  if(!del){
     j++;
-    if (j === current.length) isDeleting = true;
+    if(j==current.length) del=true;
   } else {
     j--;
-    if (j === 0) {
-      isDeleting = false;
-      i = (i + 1) % text.length;
-    }
+    if(j==0){ del=false; i=(i+1)%roles.length;}
   }
 
-  document.querySelector(".typing").textContent = current.substring(0, j);
-  setTimeout(type, isDeleting ? 50 : 100);
+  document.querySelector(".typing").innerText = current.substring(0,j);
+  setTimeout(type, del?50:100);
 }
 type();
 
-// PARTICLES CONFIG
+// PARTICLES
 particlesJS("particles-js", {
   particles: {
     number: { value: 60 },
-    size: { value: 3 },
-    move: { speed: 2 },
     line_linked: { enable: true, color: "#00eaff" }
   }
+});
+
+// 3D TILT EFFECT
+document.querySelectorAll(".tilt").forEach(card=>{
+  card.addEventListener("mousemove", e=>{
+    let x = e.offsetX;
+    let y = e.offsetY;
+    card.style.transform = `rotateY(${x/20}deg) rotateX(${y/20}deg)`;
+  });
+  card.addEventListener("mouseleave", ()=>{
+    card.style.transform = "rotate(0)";
+  });
 });
