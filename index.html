@@ -4,24 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manu Kumar</title>
+
 <link rel="stylesheet" href="style.css">
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
+
+<!-- PARTICLES -->
+<div id="particles-js"></div>
 
 <header>
   <h2>&lt;/&gt; Portfolio</h2>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <img src="profile.jpeg" class="profile">
 
   <h1>Manu Kumar</h1>
-  <h3>BCA Student & Aspiring Developer</h3>
+  <h3><span class="typing"></span></h3>
 
   <p>
     Passionate about Machine Learning, Cybersecurity, and building impactful software solutions.
@@ -29,19 +36,22 @@
 
   <div class="buttons">
     <a href="#projects">View Projects</a>
-    <a href="#contact" class="outline">Get in Touch</a>
+    <a href="resume.pdf" download>Download Resume</a>
+  </div>
+
+  <div class="socials">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="card reveal">
   <h2>About Me</h2>
   <p>
-    I'm a BCA student passionate about solving real-world problems using Machine Learning and Cybersecurity.
+    BCA student exploring AI, ML & Cybersecurity. Building real-world impactful projects.
   </p>
 </section>
 
-<!-- SKILLS -->
 <section class="card reveal">
   <h2>Skills</h2>
 
@@ -55,19 +65,12 @@
     <div class="bar"><div style="width:70%"></div></div>
   </div>
 
-  <div class="skill">
-    <span>GitHub</span>
-    <div class="bar"><div style="width:75%"></div></div>
-  </div>
-
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="card reveal">
   <h2>Projects</h2>
 
   <div class="projects-grid">
-
     <div class="project-card">
       <h3>AgriVision</h3>
       <p>Plant disease detection using ML</p>
@@ -77,27 +80,26 @@
       <h3>AI Digital Twin Hacker</h3>
       <p>Cybersecurity scanner with AI prediction</p>
     </div>
-
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="card reveal">
+<section class="card reveal">
   <h2>Contact</h2>
-
   <form>
     <input type="text" placeholder="Name">
     <input type="email" placeholder="Email">
     <textarea placeholder="Message"></textarea>
     <button>Send Message</button>
   </form>
-
 </section>
 
 <footer>
   <p>© 2026 Manu Kumar</p>
 </footer>
 
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
